@@ -37,8 +37,6 @@ export default function ContactForm({ onSubmit }) {
         contact => contact.name.toLowerCase() === data.name.toLowerCase()
       )
     ) {
-      setName('');
-      setNumber('');
       return alert(`Number: ${data.name} is already in phonebook`);
     }
     dispatch(addContact(data));
